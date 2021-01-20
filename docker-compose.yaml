@@ -6,3 +6,16 @@ services:
     container_name: welcome
     ports:
       - 3000:3000
+  storage:
+    image: mongo:3.6.1
+    container_name: storage
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+    command: mongod
+
+volumes:
+  mongodb:
+  mongodb_config:
