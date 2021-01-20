@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  welcome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: welcome
+    ports:
+      - 3000:3000
