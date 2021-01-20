@@ -8,7 +8,11 @@
     "private": true,
     "scripts": {
         "start": "node ./src/server.js",
-        "docker-build": "docker build --tag docker-playground ."
+        "docker:build": "docker build --tag tohasan/docker-playground .",
+        "docker:run": "docker run -p 3000:3000 --name playground -d tohasan/docker-playground",
+        "docker:start": "docker start playground",
+        "docker:stop": "docker stop playground",
+        "docker:push": "docker push tohasan/docker-playground"
     },
     "dependencies": {
         "body-parser": "1.19.0",

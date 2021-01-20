@@ -6,7 +6,7 @@ WORKDIR /opt/docker-playground/
 
 COPY package.json /opt/docker-playground/
 COPY package-lock.json /opt/docker-playground/
-COPY ./src /opt/docker-playground
+COPY ./src /opt/docker-playground/src
 
 RUN npm install
 
