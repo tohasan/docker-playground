@@ -52,6 +52,17 @@ docker run -p 8080:80 --name playground -d docker-playground
 -- Go to a stopped container
 docker run -it --entrypoint=/bin/bash hub.veeroute.com/workspace-facade:web4
 
+-- Starting a shell in the Docker Alpine container
+docker run -it --rm alpine /bin/ash
+(inside container) / # 
+
+Options used above:
+
+* /bin/ash is Ash (Almquist Shell) provided by BusyBox
+* --rm Automatically remove the container when it exits (docker run --help)
+* -i Interactive mode (Keep STDIN open even if not attached)
+* -t Allocate a pseudo-TTY
+
 # General useful Ubuntu commands
 
 -- Check the version of the core of OS 
